@@ -1,0 +1,14 @@
+<svg width="240" height="80" viewBox="0 0 240 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="g" x1="0" x2="1">
+      <stop offset="0" stop-color="#00c0ff"/>
+      <stop offset="1" stop-color="#6be0ff"/>
+    </linearGradient>
+  </defs>
+  <rect width="240" height="80" rx="14" fill="transparent"/>
+  <g transform="translate(12,8)">
+    <path d="M0 64 L16 0 L32 64 Z" fill="url(#g)"/>
+    <text x="52" y="46" font-family="Inter, Arial, sans-serif" font-size="28" font-weight="700" fill="#e9fbff">VKLabs</text>
+    <text x="52" y="64" font-family="Inter, Arial, sans-serif" font-size="12" fill="#9fb0c8">TECH</text>
+  </g>
+</svg>

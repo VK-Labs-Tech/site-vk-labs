@@ -22,60 +22,74 @@ export const FinalCTA = () => {
 
   return (
     <section id="contact" className="final-cta" aria-label="Contato">
-      <div className="container final-cta-inner">
-        <div>
-          <p className="section-overline">Próximo passo</p>
-          <h2>Agende uma demonstração de 15 minutos</h2>
-          <p>
-            Entenda como o SaaS de agendamento e as soluções sob medida podem aumentar sua conversão.
-          </p>
-        </div>
+      <div className="container">
+        <div className="final-cta-inner">
+          <div>
+            <p className="section-overline reveal">Próximo passo</p>
+            <h2 className="gradient-heading reveal reveal-delay-1">Agende uma demonstração de 15 minutos</h2>
+            <p className="reveal reveal-delay-2">
+              Entenda como o SaaS de agendamento e as soluções sob medida podem aumentar sua conversão e produtividade.
+            </p>
 
-        <form className="lead-form" onSubmit={handleSubmit}>
-          <label>
-            Nome
-            <input
-              type="text"
-              name="name"
-              autoComplete="name"
-              required
-              value={name}
-              onChange={(event) => setName(event.target.value)}
-              placeholder="Seu nome"
-            />
-          </label>
-
-          <label>
-            WhatsApp ou e-mail
-            <input
-              type="text"
-              name="contact"
-              autoComplete="email"
-              required
-              value={contact}
-              onChange={(event) => setContact(event.target.value)}
-              placeholder="(99) 99999-9999 ou voce@empresa.com"
-            />
-          </label>
-
-          <label>
-            Objetivo
-            <textarea
-              name="goal"
-              rows={3}
-              required
-              value={goal}
-              onChange={(event) => setGoal(event.target.value)}
-              placeholder="Conte em 1 frase o que você precisa"
-            />
-          </label>
-
-          <div className="final-cta-actions">
-            <button className="btn primary large" type="submit">
-              Enviar no WhatsApp
-            </button>
+            <div className="final-cta-actions reveal reveal-delay-3">
+              <a
+                className="btn ghost"
+                href="https://wa.me/5565992823707"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                💬 WhatsApp direto
+              </a>
+              <a className="btn ghost" href="mailto:contato@vklabs.tech">
+                ✉️ contato@vklabs.tech
+              </a>
+            </div>
           </div>
-        </form>
+
+          <form className="lead-form reveal reveal-delay-2" onSubmit={handleSubmit}>
+            <label>
+              Nome
+              <input
+                type="text"
+                name="name"
+                autoComplete="name"
+                required
+                value={name}
+                onChange={(event) => setName(event.target.value)}
+                placeholder="Seu nome"
+              />
+            </label>
+
+            <label>
+              WhatsApp ou e-mail
+              <input
+                type="text"
+                name="contact"
+                autoComplete="email"
+                required
+                value={contact}
+                onChange={(event) => setContact(event.target.value)}
+                placeholder="(99) 99999-9999 ou voce@empresa.com"
+              />
+            </label>
+
+            <label>
+              Objetivo
+              <textarea
+                name="goal"
+                rows={3}
+                required
+                value={goal}
+                onChange={(event) => setGoal(event.target.value)}
+                placeholder="Conte em 1 frase o que você precisa"
+              />
+            </label>
+
+            <button className="btn primary large" type="submit">
+              Enviar no WhatsApp →
+            </button>
+          </form>
+        </div>
       </div>
     </section>
   )

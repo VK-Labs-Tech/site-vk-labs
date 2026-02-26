@@ -34,15 +34,38 @@ export const Hero: React.FC = () => {
   ]
 
   const [activeIndex, setActiveIndex] = useState(0)
+  const [panelStyle, setPanelStyle] = useState<React.CSSProperties>({})
+
+  const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
+    const rect = e.currentTarget.getBoundingClientRect()
+    const x = (e.clientX - rect.left) / rect.width - 0.5
+    const y = (e.clientY - rect.top) / rect.height - 0.5
+    setPanelStyle({
+      transform: `perspective(1200px) rotateX(${-y * 4}deg) rotateY(${x * 4}deg)`,
+      transition: 'transform 0.1s linear',
+    })
+  }
+
+  const handleMouseLeave = () => {
+    setPanelStyle({
+      transform: '',
+      transition: 'transform 0.6s cubic-bezier(0.22, 1, 0.36, 1)',
+    })
+  }
 
   const goToSlide = (index: number) => {
     setActiveIndex(index)
   }
+
   const translateX = -(activeIndex * 100)
 
   return (
     <section id="services" className="h-scroll-section">
-      <div className="h-scroll-sticky">
+      <div
+        className="h-scroll-sticky"
+        onMouseMove={handleMouseMove}
+        onMouseLeave={handleMouseLeave}
+      >
         <div className="h-scroll-track" style={{ transform: `translate3d(${translateX}vw, 0, 0)` }}>
           {slides.map((slide, index) => (
             <article key={slide.accent} className="h-slide">
@@ -56,9 +79,26 @@ export const Hero: React.FC = () => {
 
                   <p className="lead">{slide.description}</p>
 
+                  <div className="hero-carousel-nav">
+                    {slides.map((s, i) => (
+                      <button
+                        key={s.accent}
+                        type="button"
+                        className={`carousel-dot ${activeIndex === i ? 'active' : ''}`}
+                        aria-label={`Ir para ${s.accent}`}
+                        onClick={() => goToSlide(i)}
+                      />
+                    ))}
+                    <span className="carousel-hint">navegue pelos serviços</span>
+                  </div>
+
                   <div className="hero-actions">
-                    <a className="btn primary" href="mailto:contato@vklabs.tech">Começar projeto</a>
-                    <a className="btn ghost" href="#footer">Falar com especialista</a>
+                    <a className="btn primary large" href="mailto:contato@vklabs.tech">
+                      Começar projeto
+                    </a>
+                    <a className="btn ghost large" href="#contact">
+                      Falar com especialista
+                    </a>
                   </div>
 
                   <ul className="hero-features">
@@ -71,6 +111,7 @@ export const Hero: React.FC = () => {
                 <div className="hero-visual">
                   <div
                     className={`visual-panel premium-panel ${activeIndex === index ? 'is-active' : ''}`}
+                    style={activeIndex === index ? panelStyle : undefined}
                   >
                     <img
                       src={heroImg}
@@ -79,7 +120,7 @@ export const Hero: React.FC = () => {
                       decoding="async"
                       fetchPriority={index === 0 ? 'high' : 'auto'}
                     />
-                    <div className="phone-badge">Solução profissional</div>
+                    <div className="phone-badge">✦ Solução profissional</div>
                     <div className="testi-bubble">
                       <img src="/favicon.svg" alt="avatar" className="avatar" />
                       <div className="testi-text">
@@ -87,24 +128,30 @@ export const Hero: React.FC = () => {
                         <span>{slide.accent}</span>
                       </div>
                     </div>
+
+                    {activeIndex === index && (
+                      <>
+                        <div className="hero-float-badge hero-float-badge-1" aria-hidden="true">
+                          <span className="badge-icon">⚡</span>
+                          <div className="badge-text">
+                            <strong>Entrega rápida</strong>
+                            <span>4–8 semanas</span>
+                          </div>
+                        </div>
+                        <div className="hero-float-badge hero-float-badge-2" aria-hidden="true">
+                          <span className="badge-icon">📈</span>
+                          <div className="badge-text">
+                            <strong>+32% conversão</strong>
+                            <span>em 60 dias</span>
+                          </div>
+                        </div>
+                      </>
+                    )}
                   </div>
                 </div>
               </div>
             </article>
           ))}
-        </div>
-
-        <div className="h-progress" aria-label="Progresso dos serviços">
-          {slides.map((slide, index) => (
-            <button
-              key={slide.accent}
-              type="button"
-              className={`carousel-dot ${activeIndex === index ? 'active' : ''}`}
-              aria-label={`Ir para ${slide.accent}`}
-              onClick={() => goToSlide(index)}
-            />
-          ))}
-          <span className="carousel-hint">Use os pontos para navegar</span>
         </div>
 
         <div className="h-snap-label">{String(activeIndex + 1).padStart(2, '0')} / {String(slides.length).padStart(2, '0')}</div>

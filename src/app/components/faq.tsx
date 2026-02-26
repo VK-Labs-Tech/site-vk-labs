@@ -21,13 +21,16 @@ export const FAQ = () => {
   return (
     <section id="faq" className="faq" aria-label="Perguntas frequentes">
       <div className="container">
-        <p className="section-overline">FAQ</p>
-        <h2>Perguntas frequentes</h2>
+        <p className="section-overline reveal">FAQ</p>
+        <h2 className="gradient-heading reveal reveal-delay-1">Perguntas frequentes</h2>
 
         <div className="faq-list">
-          {items.map((item) => (
-            <details key={item.q} className="faq-item">
-              <summary>{item.q}</summary>
+          {items.map((item, i) => (
+            <details key={item.q} className={`faq-item reveal reveal-delay-${i + 1}`}>
+              <summary>
+                {item.q}
+                <span className="faq-chevron" aria-hidden="true">▾</span>
+              </summary>
               <p>{item.a}</p>
             </details>
           ))}

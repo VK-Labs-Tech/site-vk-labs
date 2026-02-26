@@ -1,16 +1,17 @@
 import logo from '../../assets/logo.svg'
-
 import { useState } from 'react'
+import { useHeaderScroll } from '../../hooks/use-header-scroll'
 
 export const AppHeader = () => {
   const [open, setOpen] = useState(false)
+  const scrolled = useHeaderScroll(20)
 
   return (
-    <header className="app-header">
+    <header className={`app-header${scrolled ? ' scrolled' : ''}`}>
       <div className="container header-inner">
-        <div className="brand">
+        <a href="#" className="brand" aria-label="VKLabs Tech — início">
           <img src={logo} alt="VKLabs Tech" className="brand-logo" />
-        </div>
+        </a>
 
         <button
           className={`hamburger ${open ? 'is-open' : ''}`}
@@ -35,5 +36,5 @@ export const AppHeader = () => {
         </div>
       </div>
     </header>
-  );
-};
+  )
+}

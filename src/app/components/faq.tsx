@@ -9,6 +9,10 @@ export const FAQ = () => {
       a: 'Sim. Você já começa com agenda, confirmações automáticas, gestão de equipe e painel operacional.',
     },
     {
+      q: 'O Diario de Bordo do Caminhoneiro pode ser personalizado para minha frota?',
+      a: 'Sim. Adaptamos regras de jornada, checklist, relatorios e integracoes para refletir o processo da sua operacao.',
+    },
+    {
       q: 'Vocês fazem integração com WhatsApp e e-mail?',
       a: 'Fazemos integrações para notificações, lembretes e fluxos de confirmação conforme sua operação.',
     },

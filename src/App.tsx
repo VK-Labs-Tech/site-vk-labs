@@ -3,9 +3,8 @@ import { useEffect, useState } from 'react'
 import { AppHeader } from './app/components/app-header'
 import { AppFooter } from './app/components/app-footer'
 import { Hero } from './app/components/hero'
-import { SocialProof } from './app/components/social-proof'
+import { Projects } from './app/components/projects'
 import { HowItWorks } from './app/components/how-it-works'
-import { Testimonials } from './app/components/testimonials'
 import { FAQ } from './app/components/faq'
 import { FinalCTA } from './app/components/final-cta'
 import { useReveal } from './hooks/use-reveal'
@@ -54,11 +53,10 @@ function App() {
         <AppHeader />
         <main>
           <Hero />
-          <SocialProof />
+          <div className="section-sep" />
+          <Projects />
           <div className="section-sep" />
           <HowItWorks />
-          <div className="section-sep" />
-          <Testimonials />
           <div className="section-sep" />
           <FAQ />
           <FinalCTA />

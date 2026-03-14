@@ -26,6 +26,7 @@ export const AppHeader = () => {
 
         <nav className={`nav ${open ? 'open' : ''}`} role="navigation">
           <a href="#services" onClick={() => setOpen(false)}>Serviços</a>
+          <a href="#projects" onClick={() => setOpen(false)}>Projetos</a>
           <a href="#process" onClick={() => setOpen(false)}>Como funciona</a>
           <a href="#faq" onClick={() => setOpen(false)}>FAQ</a>
           <a href="#contact" onClick={() => setOpen(false)}>Contato</a>

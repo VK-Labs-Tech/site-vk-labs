@@ -26,9 +26,9 @@ export const FinalCTA = () => {
         <div className="final-cta-inner">
           <div>
             <p className="section-overline reveal">Próximo passo</p>
-            <h2 className="gradient-heading reveal reveal-delay-1">Agende uma demonstração de 15 minutos</h2>
+            <h2 className="gradient-heading reveal reveal-delay-1">Agende uma conversa estrategica de 15 minutos</h2>
             <p className="reveal reveal-delay-2">
-              Entenda como o SaaS de agendamento e as soluções sob medida podem aumentar sua conversão e produtividade.
+              Entenda como nossas solucoes sob medida, incluindo o Diario de Bordo do Caminhoneiro, podem profissionalizar sua operacao e acelerar resultados.
             </p>
 
             <div className="final-cta-actions reveal reveal-delay-3">

@@ -396,6 +396,7 @@ main > section:not(:first-child) {
   height: auto;
   display: flex;
   align-items: flex-start;
+  padding-top: 2rem;
 }
 
 .h-slide-inner {
@@ -1486,7 +1487,6 @@ main > section:not(:first-child) {
     padding: 30px 0;
   }
   .h-scroll-track { height: auto; }
-  .h-slide { height: auto; align-items: flex-start; }
   .h-slide-inner { grid-template-columns: 1fr; gap: 24px; }
   .h-progress { bottom: 12px; width: calc(100% - 24px); border-radius: 14px; justify-content: center; flex-wrap: wrap; }
   .hero-copy h1 { font-size: 38px; }

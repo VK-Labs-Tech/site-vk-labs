@@ -82,9 +82,8 @@ export const Hero: React.FC = () => {
     const translateX = -(activeIndex * 100)
 
     return (
-        <section id="services" className="h-scroll">
+        <section id="services">
             <div
-                className="h-scroll"
                 onMouseMove={handleMouseMove}
                 onMouseLeave={handleMouseLeave}
             >

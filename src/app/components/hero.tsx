@@ -24,7 +24,7 @@ export const Hero: React.FC = () => {
             description: 'Projetamos e desenvolvemos soluções digitais sob medida para empresas que precisam integrar sistemas, automatizar processos e ter controle real sobre suas operações.',
 
             tags: [
-                'Soluções sob medida para empresas',
+                'Soluções sob medida para a sua empresas',
                 'Integração entre sistemas e plataformas',
                 'Aplicativos e portais personalizados'
             ],
@@ -48,7 +48,9 @@ export const Hero: React.FC = () => {
                 },
             ],
             metrics: [
-                {label: 'Projetos', value: '2+'},
+                {label: 'Projetos', value: '3+'},
+                {label: 'Clientes', value: '2+'},
+                {label: 'Soluções ativas', value: '3+'},
             ],
         },
     ]
@@ -80,9 +82,9 @@ export const Hero: React.FC = () => {
     const translateX = -(activeIndex * 100)
 
     return (
-        <section id="services" className="h-scroll-section">
+        <section id="services" className="h-scroll">
             <div
-                className="h-scroll-sticky"
+                className="h-scroll"
                 onMouseMove={handleMouseMove}
                 onMouseLeave={handleMouseLeave}
             >

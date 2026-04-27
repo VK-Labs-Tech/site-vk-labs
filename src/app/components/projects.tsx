@@ -12,36 +12,24 @@ type Project = {
 export const Projects: React.FC = () => {
     const items: Project[] = [
         {
-            name: "Diário de Bordo do Caminhoneiro",
-            category: "Logística e operação de frotas",
+            name: "VK Labs Agenda",
+            category: "Agenda e atendimento",
             description:
-                "Sistema para registrar viagens, jornada, abastecimentos e manutenções em um único fluxo para motorista e gestor.",
+                "Plataforma de agendamento com agenda inteligente, confirmações automáticas, gestão de equipe e painel operacional.",
             result:
-                "Redução de retrabalho no fechamento mensal e visibilidade da operação em tempo real.",
-            icon: "🚚",
-            tags: ["Web + Mobile", "Relatórios", "Alertas inteligentes"],
+                "Maior taxa de comparecimento e agenda organizada no dia a dia.",
+            icon: "📅",
+            tags: ["Automação", "WhatsApp", "Gestão de equipe", "Painel"],
         },
         {
-            name: "SaaS de Agendamento",
-            category: "Saúde e serviços locais",
+            name: "Ponto do Colaborador",
+            category: "RH e jornada de trabalho",
             description:
-                "Plataforma com agenda inteligente, confirmações automáticas e painel de performance.",
+                "Sistema para registro de ponto e acompanhamento da jornada, com visão para colaborador e gestão.",
             result:
-                "Maior taxa de comparecimento e agenda mais organizada.",
-            icon: "📅",
-            tags: ["Automação", "WhatsApp", "Gestão de equipe"],
-        },
-        {
-            name: "Gestão Inteligente de Lotes de Sementes",
-            category: "Saúde e serviços locais",
-            description:
-                "Sistema para rastrear variedades de sementes utilizadas" +
-                "em cada talhão da fazenda, registrando plantio, safra" +
-                "e produtividade por área.",
-            result:
-                "Decisões mais precisas na escolha de sementes e aumento de produtividade.",
-            icon: "📅",
-            tags: ["Agro", "Rastreabilidade", "Gestão de equipe", "Produtividade", "Dashboard"],
+                "Controle de jornada mais claro e base para espelho ponto e conformidade.",
+            icon: "⏱️",
+            tags: ["Web + Mobile", "Jornada", "Relatórios", "RH"],
         },
     ]
 
@@ -57,8 +45,8 @@ export const Projects: React.FC = () => {
                     </h2>
 
                     <p className="section-description">
-                        Desenvolvemos soluções digitais focadas em eficiência operacional,
-                        integração de sistemas e crescimento sustentável das empresas.
+                        Nossos produtos atuais concentram-se na VK Labs Agenda e no Ponto do Colaborador,
+                        para agendar com previsibilidade e registrar jornada com clareza.
                     </p>
                 </div>
 

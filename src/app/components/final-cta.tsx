@@ -28,7 +28,7 @@ export const FinalCTA = () => {
             <p className="section-overline reveal">Próximo passo</p>
             <h2 className="gradient-heading reveal reveal-delay-1">Agende uma conversa estrategica de 15 minutos</h2>
             <p className="reveal reveal-delay-2">
-              Entenda como nossas solucoes sob medida, incluindo o Diario de Bordo do Caminhoneiro, podem profissionalizar sua operacao e acelerar resultados.
+              Fale com a VK Labs sobre a Agenda e o Ponto do Colaborador: implantação, integrações e o que faz sentido para sua equipe.
             </p>
 
             <div className="final-cta-actions reveal reveal-delay-3">

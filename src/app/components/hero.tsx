@@ -17,40 +17,36 @@ export const Hero: React.FC = () => {
         {
             kicker: 'VK Labs Tech',
 
-            titlePrefix: 'Sistemas e produtos digitais',
+            titlePrefix: 'VK Labs —',
 
-            accent: 'construídos para a realidade da sua operação',
+            accent: 'Agenda e Ponto do Colaborador',
 
-            description: 'Projetamos e desenvolvemos soluções digitais sob medida para empresas que precisam integrar sistemas, automatizar processos e ter controle real sobre suas operações.',
+            description:
+                'A VK Labs oferece dois sistemas focados na sua operação: agenda inteligente com confirmações e lembretes, e ponto do colaborador com registro de jornada e visão para gestão.',
 
             tags: [
-                'Soluções sob medida para a sua empresas',
-                'Integração entre sistemas e plataformas',
-                'Aplicativos e portais personalizados'
+                'Agenda com confirmações e lembretes',
+                'Ponto do colaborador com jornada e relatórios',
+                'Painéis prontos para equipe e gestão',
             ],
 
-            products: [
-                'Diário de Bordo do Caminhoneiro',
-                'SaaS de Agendamento Inteligente',
-                'Portal Comercial B2B',
-                'Painel Operacional e Analytics'
-            ],
+            products: ['VK Labs Agenda', 'Ponto do Colaborador'],
 
-            focusTitle: 'Tecnologia construída para a realidade da sua operação.',
+            focusTitle: 'Dois produtos para organizar agenda e jornada de trabalho.',
             focusBlocks: [
                 {
-                    title: 'Diagnóstico estratégico',
-                    text: 'Entendemos a operação, identificamos gargalos e definimos onde a tecnologia realmente gera eficiência e previsibilidade.',
+                    title: 'VK Labs Agenda',
+                    text: 'Gestão de agenda, equipe e lembretes para reduzir faltas e manter o calendário alinhado à operação.',
                 },
                 {
-                    title: 'Execução técnica',
-                    text: 'Projetamos e desenvolvemos integrações, automações, aplicativos e plataformas digitais sob medida para o contexto do cliente.',
+                    title: 'Ponto do Colaborador',
+                    text: 'Registro de ponto e acompanhamento da jornada com base para espelho e decisões de RH.',
                 },
             ],
             metrics: [
-                {label: 'Projetos', value: '3+'},
-                {label: 'Clientes', value: '2+'},
-                {label: 'Soluções ativas', value: '3+'},
+                { label: 'Sistemas VK Labs', value: '2' },
+                { label: 'Agenda', value: 'Confirmações e equipe' },
+                { label: 'Ponto', value: 'Jornada e relatórios' },
             ],
         },
     ]
@@ -115,7 +111,7 @@ export const Hero: React.FC = () => {
                                 <div className="hero-visual">
                                     <div className={`hero-focus-panel ${activeIndex === index ? 'is-active' : ''}`}
                                          style={activeIndex === index ? panelStyle : undefined}>
-                                        <p className="hero-focus-overline">Foco de atuacao</p>
+                                        <p className="hero-focus-overline">Foco de atuação</p>
                                         <h3>{slide.focusTitle}</h3>
 
                                         <div className="hero-focus-grid">

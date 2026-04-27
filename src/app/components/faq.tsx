@@ -9,8 +9,8 @@ export const FAQ = () => {
       a: 'Sim. Você já começa com agenda, confirmações automáticas, gestão de equipe e painel operacional.',
     },
     {
-      q: 'O Diario de Bordo do Caminhoneiro pode ser personalizado para minha frota?',
-      a: 'Sim. Adaptamos regras de jornada, checklist, relatorios e integracoes para refletir o processo da sua operacao.',
+      q: 'O Ponto do Colaborador atende à minha política de jornada?',
+      a: 'O sistema é pensado para registrar marcações e apoiar a gestão da jornada; detalhes de política e conformidade legal devem ser alinhados ao seu contexto na implantação.',
     },
     {
       q: 'Vocês fazem integração com WhatsApp e e-mail?',

@@ -10,6 +10,7 @@ export const AppFooter = () => {
         <nav className="footer-links" aria-label="Links do rodapé">
           <a href="#services">Serviços</a>
           <a href="#projects">Projetos</a>
+          <a href="#sistema-2d">Sistema 2D</a>
           <a href="#process">Como funciona</a>
           <a href="#faq">FAQ</a>
         </nav>

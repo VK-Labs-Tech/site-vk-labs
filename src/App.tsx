@@ -3,7 +3,10 @@ import { useEffect, useState } from 'react'
 import { AppHeader } from './app/components/app-header'
 import { AppFooter } from './app/components/app-footer'
 import { Hero } from './app/components/hero'
+import { SocialProof } from './app/components/social-proof'
+import { Services } from './app/components/services'
 import { Projects } from './app/components/projects'
+import { Sistema2D } from './app/components/sistema-2d'
 import { HowItWorks } from './app/components/how-it-works'
 import { FAQ } from './app/components/faq'
 import { FinalCTA } from './app/components/final-cta'
@@ -54,7 +57,13 @@ function App() {
         <main>
           <Hero />
           <div className="section-sep" />
+          <SocialProof />
+          <div className="section-sep" />
+          <Services />
+          <div className="section-sep" />
           <Projects />
+          <div className="section-sep" />
+          <Sistema2D />
           <div className="section-sep" />
           <HowItWorks />
           <div className="section-sep" />

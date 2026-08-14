@@ -9,7 +9,7 @@ export const AppHeader = () => {
   return (
     <header className={`app-header${scrolled ? ' scrolled' : ''}`}>
       <div className="container header-inner">
-        <a href="#" className="brand" aria-label="VKLabs Tech — início">
+        <a href="#home" className="brand" aria-label="VKLabs Tech — início">
           <img src={logo} alt="VKLabs Tech" className="brand-logo" />
         </a>
 
@@ -27,6 +27,7 @@ export const AppHeader = () => {
         <nav className={`nav ${open ? 'open' : ''}`} role="navigation">
           <a href="#services" onClick={() => setOpen(false)}>Serviços</a>
           <a href="#projects" onClick={() => setOpen(false)}>Projetos</a>
+          <a href="#sistema-2d" onClick={() => setOpen(false)}>Sistema 2D</a>
           <a href="#process" onClick={() => setOpen(false)}>Como funciona</a>
           <a href="#faq" onClick={() => setOpen(false)}>FAQ</a>
           <a href="#contact" onClick={() => setOpen(false)}>Contato</a>

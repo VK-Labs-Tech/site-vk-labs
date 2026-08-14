@@ -26,9 +26,9 @@ export const FinalCTA = () => {
         <div className="final-cta-inner">
           <div>
             <p className="section-overline reveal">Próximo passo</p>
-            <h2 className="gradient-heading reveal reveal-delay-1">Agende uma conversa estrategica de 15 minutos</h2>
+            <h2 className="gradient-heading reveal reveal-delay-1">Agende uma conversa estratégica de 15 minutos</h2>
             <p className="reveal reveal-delay-2">
-              Fale com a VK Labs sobre a Agenda e o Ponto do Colaborador: implantação, integrações e o que faz sentido para sua equipe.
+              Fale com a VK Labs sobre Agenda, Ponto do Colaborador ou o Sistema 2D para loja de calçados: implantação, integrações e o que faz sentido para a sua operação.
             </p>
 
             <div className="final-cta-actions reveal reveal-delay-3">
@@ -81,7 +81,7 @@ export const FinalCTA = () => {
                 required
                 value={goal}
                 onChange={(event) => setGoal(event.target.value)}
-                placeholder="Conte em 1 frase o que você precisa"
+                placeholder="Agenda, ponto, Sistema 2D ou outro objetivo"
               />
             </label>
 

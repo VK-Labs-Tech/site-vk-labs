@@ -3,11 +3,6 @@ import React from 'react'
 export const Services: React.FC = () => {
   const items = [
     {
-      icon: '📅',
-      title: 'Agenda e atendimento',
-      desc: 'Agendamento, confirmações e gestão de equipe para clínicas, salões e negócios de serviço.',
-    },
-    {
       icon: '⏱️',
       title: 'Jornada e RH',
       desc: 'Registro de ponto, acompanhamento da jornada e base para espelho ponto da equipe.',
@@ -30,7 +25,7 @@ export const Services: React.FC = () => {
         <p className="section-overline reveal">O que entregamos</p>
         <h2 className="gradient-heading reveal reveal-delay-1">Sistemas para a operação do dia a dia</h2>
         <p className="section-description reveal reveal-delay-2">
-          Da agenda ao ponto, e agora também o varejo de calçados: software pensado para o balcão, a equipe e a gestão.
+          Do ponto ao varejo de calçados: software pensado para o balcão, a equipe e a gestão.
         </p>
 
         <div className="services-grid">

@@ -7,7 +7,7 @@ export const SocialProof: React.FC = () => {
         <div className="proof-grid proof-grid-3">
           <article className="proof-card reveal">
             <strong>3</strong>
-            <p>Sistemas VK Labs em operação: Agenda, Ponto e Sistema 2D.</p>
+            <p>Sistemas VK Labs em operação: Ponto e Sistema 2D.</p>
           </article>
           <article className="proof-card reveal reveal-delay-1">
             <strong>Grade</strong>

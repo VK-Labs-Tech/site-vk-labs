@@ -7,7 +7,7 @@ export const AppHeader = () => {
   const scrolled = useHeaderScroll(20)
 
   return (
-    <header className={`app-header${scrolled ? ' scrolled' : ''}`}>
+    <header className={`bg-amber-200 app-header${scrolled ? ' scrolled' : ''}`}>
       <div className="container header-inner">
         <a href="#home" className="brand" aria-label="VKLabs Tech — início">
           <img src={logo} alt="VKLabs Tech" className="brand-logo" />

@@ -25,7 +25,7 @@ export const HowItWorks = () => {
     {
       icon: '⚡',
       title: 'Entrega com qualidade',
-      description: 'Desenvolvemos em ciclos curtos com validação contínua — Agenda, Ponto ou Sistema 2D, com UX, performance e operação no centro.',
+      description: 'Desenvolvemos em ciclos curtos com validação contínua — Ponto ou Sistema 2D, com UX, performance e operação no centro.',
     },
     {
       icon: '📈',

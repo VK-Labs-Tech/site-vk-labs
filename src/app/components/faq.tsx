@@ -5,10 +5,6 @@ export const FAQ = () => {
       a: 'Projetos de média complexidade normalmente entram em produção entre 4 e 8 semanas, conforme o produto e o ritmo da implantação.',
     },
     {
-      q: 'O SaaS de agendamento já vem pronto?',
-      a: 'Sim. Você já começa com agenda, confirmações automáticas, gestão de equipe e painel operacional.',
-    },
-    {
       q: 'O Ponto do Colaborador atende à minha política de jornada?',
       a: 'O sistema é pensado para registrar marcações e apoiar a gestão da jornada; detalhes de política e conformidade legal devem ser alinhados ao seu contexto na implantação.',
     },

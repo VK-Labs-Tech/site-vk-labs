@@ -11,7 +11,7 @@ export const Projects: React.FC = () => {
           <h2 className="gradient-heading">Tecnologia aplicada a problemas reais</h2>
 
           <p className="section-description">
-            Três produtos em operação: VK Labs Agenda, Ponto do Colaborador e o Sistema 2D para loja de calçados.
+            Três produtos em operação: VK Labs Ponto do Colaborador e o Sistema 2D para loja de calçados.
           </p>
         </div>
 

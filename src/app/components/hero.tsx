@@ -17,21 +17,16 @@ export const Hero: React.FC = () => {
     {
       kicker: 'VK Labs Tech',
       titlePrefix: 'VK Labs —',
-      accent: 'Agenda, Ponto e Sistema 2D',
+      accent: 'Ponto e Sistema 2D',
       description:
-        'Três sistemas para a operação real: agenda com confirmações, ponto do colaborador e o Sistema 2D para loja de calçados — estoque por numeração, vendas e condicional.',
+        'Três sistemas para a operação real: ponto do colaborador e o Sistema 2D para loja de calçados — estoque por numeração, vendas e condicional.',
       tags: [
-        'Agenda com confirmações e lembretes',
         'Ponto com jornada e relatórios',
         'Sistema 2D com grade, vendas e condicional',
       ],
-      products: ['VK Labs Agenda', 'Ponto do Colaborador', 'Sistema 2D'],
-      focusTitle: 'Três produtos para organizar atendimento, jornada e o varejo de calçados.',
+      products: ['Ponto do Colaborador', 'Sistema 2D'],
+      focusTitle: 'Dois produtos para organizar atendimento, jornada e o varejo de calçados.',
       focusBlocks: [
-        {
-          title: 'VK Labs Agenda',
-          text: 'Gestão de agenda, equipe e lembretes para reduzir faltas e manter o calendário alinhado à operação.',
-        },
         {
           title: 'Ponto do Colaborador',
           text: 'Registro de ponto e acompanhamento da jornada com base para espelho e decisões de RH.',
@@ -42,9 +37,9 @@ export const Hero: React.FC = () => {
         },
       ],
       metrics: [
-        { label: 'Sistemas', value: '3 produtos' },
+        { label: 'Sistemas', value: '2 produtos' },
         { label: 'Calçados', value: 'Grade e condicional' },
-        { label: 'Operação', value: 'Agenda e ponto' },
+        { label: 'Operação', value: 'Ponto' },
       ],
     },
     {

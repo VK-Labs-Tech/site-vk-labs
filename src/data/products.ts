@@ -11,17 +11,6 @@ export type Product = {
 
 export const products: Product[] = [
   {
-    id: 'agenda',
-    name: 'VK Labs Agenda',
-    category: 'Agenda e atendimento',
-    description:
-      'Plataforma de agendamento com agenda inteligente, confirmações automáticas, gestão de equipe e painel operacional.',
-    result: 'Maior taxa de comparecimento e agenda organizada no dia a dia.',
-    icon: '📅',
-    tags: ['Automação', 'WhatsApp', 'Gestão de equipe', 'Painel'],
-    href: '#projects',
-  },
-  {
     id: 'ponto',
     name: 'Ponto do Colaborador',
     category: 'RH e jornada de trabalho',

@@ -1,27 +1,46 @@
+import { Container } from './ui'
+
 export const AppFooter = () => {
   return (
-    <footer id="footer" className="app-footer">
-      <div className="container footer-inner">
-        <div className="footer-brand">
+    <footer id="footer" className="border-t border-white/[0.06] py-9">
+      <Container className="flex flex-col gap-5 text-sm md:flex-row md:items-center md:justify-between">
+        <div className="flex flex-col">
           <strong>VKLabs Tech</strong>
-          <span>© {new Date().getFullYear()} — Todos os direitos reservados</span>
+          <span className="text-mute">© {new Date().getFullYear()} — Todos os direitos reservados</span>
         </div>
 
-        <nav className="footer-links" aria-label="Links do rodapé">
-          <a href="#services">Serviços</a>
-          <a href="#projects">Projetos</a>
-          <a href="#sistema-2d">Sistema 2D</a>
-          <a href="#process">Como funciona</a>
-          <a href="#faq">FAQ</a>
+        <nav className="flex flex-wrap gap-x-6 gap-y-2" aria-label="Links do rodapé">
+          <a className="text-mute no-underline transition duration-200 hover:text-brand" href="#ponto">
+            Ponto
+          </a>
+          <a className="text-mute no-underline transition duration-200 hover:text-brand" href="#sistema-2d">
+            Sistema 2D
+          </a>
+          <a className="text-mute no-underline transition duration-200 hover:text-brand" href="#process">
+            Como funciona
+          </a>
+          <a className="text-mute no-underline transition duration-200 hover:text-brand" href="#faq">
+            FAQ
+          </a>
         </nav>
 
-        <div className="footer-contact">
-          <a href="mailto:contato@vklabs.tech">contato@vklabs.tech</a>
-          <a href="https://wa.me/5565992823707" target="_blank" rel="noopener noreferrer">
+        <div className="flex flex-col md:items-end">
+          <a
+            className="text-mute no-underline transition duration-200 hover:text-brand"
+            href="mailto:contato@vklabs.tech"
+          >
+            contato@vklabs.tech
+          </a>
+          <a
+            className="text-mute no-underline transition duration-200 hover:text-brand"
+            href="https://wa.me/5565992823707"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             +55 65 99282-3707
           </a>
         </div>
-      </div>
+      </Container>
     </footer>
   )
 }

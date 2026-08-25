@@ -1,20 +1,115 @@
 @import "tailwindcss";
 
-:root {
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+
+  --color-surface: #030811;
+  --color-surface-soft: #071426;
+  --color-surface-elevated: #0a1729;
+  --color-ink: #f4f9ff;
+  --color-ink-soft: #d9e7f4;
+  --color-mute: #8ca5bd;
+  --color-mute-dark: #627b94;
+  --color-brand: #5ed8ff;
+  --color-brand-soft: #9be7ff;
+  --color-accent: #409dff;
+  --color-warm: #ffca72;
+  --color-success: #63d2a2;
+  --color-line: rgb(255 255 255 / 0.08);
+
+  --shadow-panel: 0 24px 80px rgb(0 0 0 / 0.32);
+  --shadow-glow: 0 20px 70px rgb(94 216 255 / 0.08);
+
+  --max-width-site: 80rem;
 }
 
-* {
-  box-sizing: border-box;
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 5.5rem;
+  }
+
+  body {
+    @apply overflow-x-hidden bg-surface font-sans text-ink antialiased;
+    text-rendering: optimizeLegibility;
+  }
+
+  button,
+  input,
+  textarea,
+  select {
+    font: inherit;
+  }
+
+  button {
+    cursor: pointer;
+  }
+
+  a {
+    color: inherit;
+  }
+
+  ::selection {
+    background: rgb(94 216 255 / 0.22);
+    color: white;
+  }
+
+  #home,
+  #ponto,
+  #sistema-2d,
+  #process,
+  #faq,
+  #contact {
+    scroll-margin-top: 5.5rem;
+  }
 }
 
-html,
-body,
-#root {
-  width: 100%;
-  min-height: 100%;
-  margin: 0;
+@layer components {
+  .reveal,
+  .reveal-scale {
+    opacity: 0;
+    transform: translateY(1.25rem);
+    transition:
+      opacity 0.7s cubic-bezier(0.22, 1, 0.36, 1),
+      transform 0.7s cubic-bezier(0.22, 1, 0.36, 1);
+  }
+
+  .reveal-scale {
+    transform: translateY(1rem) scale(0.985);
+  }
+
+  .reveal.revealed,
+  .reveal-scale.revealed {
+    opacity: 1;
+    transform: none;
+  }
+
+  .reveal-delay-1 {
+    transition-delay: 80ms;
+  }
+
+  .reveal-delay-2 {
+    transition-delay: 160ms;
+  }
+
+  .reveal-delay-3 {
+    transition-delay: 240ms;
+  }
+
+  .reveal-delay-4 {
+    transition-delay: 320ms;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  .reveal,
+  .reveal-scale {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
 }

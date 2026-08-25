@@ -1,48 +1,49 @@
-import React from 'react'
+import { ChartIcon, ClockIcon, ShoeIcon } from './icons'
+import { Badge, Container, GradientHeading } from './ui'
 
-export const Services: React.FC = () => {
+export const Services = () => {
   const items = [
     {
-      icon: '⏱️',
+      icon: ClockIcon,
       title: 'Jornada e RH',
       desc: 'Registro de ponto, acompanhamento da jornada e base para espelho ponto da equipe.',
     },
     {
-      icon: '👟',
+      icon: ShoeIcon,
       title: 'Varejo de calçados',
       desc: 'Sistema 2D com grade de numeração, vendas, condicional e estoque da loja no mesmo fluxo.',
     },
     {
-      icon: '📊',
+      icon: ChartIcon,
       title: 'Painéis e implantação',
       desc: 'Dashboards operacionais, relatórios e acompanhamento contínuo depois do go-live.',
     },
   ]
 
   return (
-    <section id="services" className="services" aria-label="Serviços">
-      <div className="container">
-        <p className="section-overline reveal">O que entregamos</p>
-        <h2 className="gradient-heading reveal reveal-delay-1">Sistemas para a operação do dia a dia</h2>
-        <p className="section-description reveal reveal-delay-2">
+    <section id="services" className="py-16 sm:py-24" aria-label="Serviços">
+      <Container>
+        <Badge>O que entregamos</Badge>
+        <GradientHeading>Sistemas para a operação do dia a dia</GradientHeading>
+        <p className="mt-4 max-w-2xl text-base leading-7 text-mute">
           Do ponto ao varejo de calçados: software pensado para o balcão, a equipe e a gestão.
         </p>
 
-        <div className="services-grid">
+        <div className="mt-12 grid gap-5 md:grid-cols-3">
           {items.map((item, index) => (
             <article
               key={item.title}
-              className={`service-card reveal reveal-scale reveal-delay-${index + 1}`}
+              className={`reveal reveal-scale reveal-delay-${index + 1} rounded-2xl border border-white/[0.07] bg-gradient-to-br from-[#0d1e32]/72 to-[#07111e]/62 p-6 shadow-[0_16px_50px_rgba(0,0,0,0.16)] transition duration-200 hover:-translate-y-1 hover:border-brand/20`}
             >
-              <div className="service-icon" aria-hidden="true">
-                {item.icon}
+              <div className="mb-5 flex h-11 w-11 items-center justify-center rounded-xl border border-brand/20 bg-brand/[0.075] text-brand">
+                <item.icon />
               </div>
-              <h3>{item.title}</h3>
-              <p>{item.desc}</p>
+              <h3 className="mb-2 text-lg font-bold text-white">{item.title}</h3>
+              <p className="m-0 leading-6 text-mute">{item.desc}</p>
             </article>
           ))}
         </div>
-      </div>
+      </Container>
     </section>
   )
 }

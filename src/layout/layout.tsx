@@ -1,7 +1,7 @@
-import React from 'react'
+import type { ReactNode } from 'react'
 
-export const Layout: React.FC<{children?: React.ReactNode}> = ({ children }) => {
-  return <div className="layout-wrapper">{children}</div>
+export const Layout = ({ children }: { children?: ReactNode }) => {
+  return <div className="flex min-h-screen flex-col">{children}</div>
 }
 
 export default Layout

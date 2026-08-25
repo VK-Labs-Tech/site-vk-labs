@@ -1,62 +1,55 @@
-import React from 'react'
-
-const tiltCard = (e: React.MouseEvent<HTMLElement>) => {
-  const el = e.currentTarget
-  const rect = el.getBoundingClientRect()
-  const x = (e.clientX - rect.left) / rect.width - 0.5
-  const y = (e.clientY - rect.top) / rect.height - 0.5
-  el.style.transform = `perspective(700px) rotateX(${-y * 6}deg) rotateY(${x * 6}deg) translateY(-6px)`
-  el.style.transition = 'transform 0.08s linear, box-shadow 0.35s ease, border-color 0.35s ease'
-}
-
-const resetTiltCard = (e: React.MouseEvent<HTMLElement>) => {
-  const el = e.currentTarget
-  el.style.transform = ''
-  el.style.transition = 'transform 0.55s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.35s ease, border-color 0.35s ease'
-}
+import { RocketIcon, SearchIcon, TrendIcon } from './icons'
+import { Badge, Container, GradientHeading } from './ui'
 
 export const HowItWorks = () => {
   const steps = [
     {
-      icon: '🔍',
-      title: 'Diagnóstico estratégico',
-      description: 'Mapeamos operação, metas e oportunidades para priorizar o que traz resultado rápido.',
+      icon: SearchIcon,
+      title: 'Diagnóstico da operação',
+      description:
+        'Mapeamos jornada da equipe ou o fluxo da loja — ponto, grade, vendas e condicional — para priorizar o que entra primeiro.',
     },
     {
-      icon: '⚡',
-      title: 'Entrega com qualidade',
-      description: 'Desenvolvemos em ciclos curtos com validação contínua — Ponto ou Sistema 2D, com UX, performance e operação no centro.',
+      icon: RocketIcon,
+      title: 'Implantação do produto',
+      description:
+        'Configuramos Ponto do Colaborador ou Sistema 2D em ciclos curtos, com validação no uso real do RH ou do balcão.',
     },
     {
-      icon: '📈',
-      title: 'Escala orientada por dados',
-      description: 'Monitoramos métricas, evoluímos o produto e aceleramos crescimento com previsibilidade.',
+      icon: TrendIcon,
+      title: 'Operação e evolução',
+      description:
+        'Acompanhamos o uso, relatórios e melhorias contínuas para o sistema acompanhar a rotina — não o contrário.',
     },
   ]
 
   return (
-    <section id="process" className="how-it-works" aria-label="Como funciona">
-      <div className="container">
-        <p className="section-overline reveal">Como funciona</p>
-        <h2 className="gradient-heading reveal reveal-delay-1">Do diagnóstico ao crescimento em 3 etapas</h2>
+    <section id="process" className="py-16 sm:py-24" aria-label="Como funciona">
+      <Container>
+        <Badge>Como funciona</Badge>
+        <GradientHeading className="max-w-3xl">Do diagnóstico à operação em três etapas</GradientHeading>
 
-        <div className="steps-grid">
+        <div className="mt-12 grid gap-5 md:grid-cols-3">
           {steps.map((step, index) => (
             <article
               key={step.title}
-              className={`step-card reveal reveal-scale reveal-delay-${index + 1}`}
-              onMouseMove={tiltCard}
-              onMouseLeave={resetTiltCard}
+              className={`reveal reveal-scale reveal-delay-${index + 1} relative overflow-hidden rounded-2xl border border-white/[0.07] bg-gradient-to-br from-[#0d1e32]/72 to-[#07111e]/62 p-6 shadow-[0_16px_50px_rgba(0,0,0,0.16)] transition duration-200 hover:-translate-y-1 hover:border-brand/20 hover:shadow-[0_24px_70px_rgba(0,0,0,0.24)]`}
             >
-              <div className="step-number-bg">{String(index + 1).padStart(2, '0')}</div>
-              <div className="step-icon" aria-hidden="true">{step.icon}</div>
-              <span className="step-index">0{index + 1}</span>
-              <h3>{step.title}</h3>
-              <p>{step.description}</p>
+              <div className="pointer-events-none absolute top-4 right-5 text-4xl font-black text-white/[0.045]">
+                {String(index + 1).padStart(2, '0')}
+              </div>
+              <div className="mb-5 flex h-11 w-11 items-center justify-center rounded-xl border border-brand/20 bg-brand/[0.075] text-brand">
+                <step.icon />
+              </div>
+              <span className="mb-3 block text-xs font-bold tracking-[0.14em] text-brand uppercase">
+                0{index + 1}
+              </span>
+              <h3 className="mb-2 text-lg font-bold text-white">{step.title}</h3>
+              <p className="m-0 leading-6 text-mute">{step.description}</p>
             </article>
           ))}
         </div>
-      </div>
+      </Container>
     </section>
   )
 }

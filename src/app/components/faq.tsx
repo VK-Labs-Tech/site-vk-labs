@@ -12,7 +12,7 @@ export const FAQ = () => {
     },
     {
       q: 'O Ponto funciona no celular?',
-      a: 'Sim. O colaborador registra o ponto no mobile; a gestão acompanha jornada e relatórios no web.',
+      a: 'Sim. O colaborador registra o ponto no mobile; a gestão acompanha jornada e relatórios no web. O produto está em ponto.vklabs.online.',
     },
     {
       q: 'O Sistema 2D serve para loja de calçados com várias numerações?',
@@ -24,7 +24,15 @@ export const FAQ = () => {
     },
     {
       q: 'Tem suporte após o lançamento?',
-      a: 'Sim. Oferecemos acompanhamento contínuo com melhorias, monitoramento e suporte técnico para Ponto e Sistema 2D.',
+      a: 'Sim. Oferecemos acompanhamento contínuo com melhorias, monitoramento e suporte técnico para os produtos em operação.',
+    },
+    {
+      q: 'O DocFlow cobre criação, gestão e assinatura?',
+      a: 'Sim. O fluxo vai da minuta ao documento assinado: modelos, status das partes, prazos e trilha de assinatura. Acesse em docflow.vklabs.online.',
+    },
+    {
+      q: 'O CobraFlow já está disponível?',
+      a: 'Ainda não. O CobraFlow está em desenvolvimento. Você pode deixar o contato para ser avisado na lista de primeiros usuários.',
     },
   ]
 

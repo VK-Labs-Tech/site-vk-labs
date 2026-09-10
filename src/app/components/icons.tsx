@@ -127,3 +127,29 @@ export const CheckIcon = ({ className = 'h-5 w-5' }: IconProps) => (
     <path d="m8.8 12.2 2.2 2.2 4.3-4.6" stroke="currentColor" strokeWidth="1.75" strokeLinecap="round" strokeLinejoin="round" />
   </svg>
 )
+
+export const SignatureIcon = ({ className = 'h-5 w-5' }: IconProps) => (
+  <svg className={className} viewBox="0 0 24 24" fill="none" aria-hidden="true">
+    <path d="M4 19h16" stroke="currentColor" strokeWidth="1.75" strokeLinecap="round" />
+    <path
+      d="M5 15c1.6-2.4 3.2-4 4.6-4 1.6 0 1.7 2.6 3.2 2.6 1.3 0 2.2-3.8 4.2-3.8 1.4 0 2.4 1.4 3 3.2"
+      stroke="currentColor"
+      strokeWidth="1.75"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    />
+    <path d="M14 8.5c.6-1.4 1.6-2.5 2.8-2.5" stroke="currentColor" strokeWidth="1.75" strokeLinecap="round" />
+  </svg>
+)
+
+export const BellIcon = ({ className = 'h-5 w-5' }: IconProps) => (
+  <svg className={className} viewBox="0 0 24 24" fill="none" aria-hidden="true">
+    <path
+      d="M6.5 16.5V11a5.5 5.5 0 1 1 11 0v5.5l1.2 2H5.3l1.2-2Z"
+      stroke="currentColor"
+      strokeWidth="1.75"
+      strokeLinejoin="round"
+    />
+    <path d="M10 19.2a2 2 0 0 0 4 0" stroke="currentColor" strokeWidth="1.75" strokeLinecap="round" />
+  </svg>
+)

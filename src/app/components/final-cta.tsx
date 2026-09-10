@@ -6,7 +6,9 @@ import { Badge, Button, Container, GradientHeading } from './ui'
 const interests = [
   'Ponto do Colaborador',
   'Sistema 2D',
-  'Os dois produtos',
+  'DocFlow',
+  'CobraFlow (lista de espera)',
+  'Mais de um produto',
   'Outro assunto',
 ]
 
@@ -42,8 +44,8 @@ export const FinalCTA = () => {
             <Badge>Contato</Badge>
             <GradientHeading>Vamos conversar sobre a sua operação</GradientHeading>
             <p className="mt-4 max-w-xl leading-7 text-mute">
-              Conte o contexto da equipe ou da loja. Indicamos o produto certo, o prazo de implantação e o
-              que precisa estar pronto no go-live.
+              Conte o contexto da operação. Indicamos o produto certo — Ponto, Sistema 2D, DocFlow ou a
+              lista de espera do CobraFlow — e o que precisa estar pronto no go-live.
             </p>
 
             <ul className="mt-8 grid list-none gap-4 p-0">
@@ -123,7 +125,7 @@ export const FinalCTA = () => {
                 required
                 value={goal}
                 onChange={(event) => setGoal(event.target.value)}
-                placeholder="Tamanho da equipe, loja, prazo ou o que precisa resolver."
+                placeholder="Equipe, contratos, cobrança, loja ou o que precisa resolver."
                 className={`${fieldClass} min-h-[112px] resize-y`}
               />
             </label>

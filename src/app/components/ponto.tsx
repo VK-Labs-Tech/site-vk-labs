@@ -41,6 +41,14 @@ export const Ponto = () => {
             Sistema para marcar ponto e acompanhar a jornada — com visão para o colaborador e para a gestão,
             e base para o espelho ponto.
           </p>
+          <a
+            className="mt-3 inline-block text-sm font-medium text-brand no-underline hover:text-brand-soft"
+            href="https://ponto.vklabs.online"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            ponto.vklabs.online
+          </a>
         </div>
 
         <div className="grid items-start gap-10 lg:grid-cols-2">
@@ -103,7 +111,14 @@ export const Ponto = () => {
           <p className="m-0 max-w-xl text-ink-soft">
             Quer organizar o ponto da equipe com jornada e relatórios no mesmo lugar?
           </p>
-          <Button href="#contact">Falar sobre o Ponto</Button>
+          <div className="flex flex-col gap-3 sm:flex-row">
+            <Button href="https://ponto.vklabs.online" target="_blank" rel="noopener noreferrer">
+              Acessar o Ponto
+            </Button>
+            <Button href="#contact" variant="ghost">
+              Falar sobre o Ponto
+            </Button>
+          </div>
         </div>
       </Container>
     </section>

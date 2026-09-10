@@ -6,6 +6,8 @@ import { About } from './app/components/about'
 import { Projects } from './app/components/projects'
 import { Ponto } from './app/components/ponto'
 import { Sistema2D } from './app/components/sistema-2d'
+import { DocFlow } from './app/components/docflow'
+import { CobraFlow } from './app/components/cobraflow'
 import { HowItWorks } from './app/components/how-it-works'
 import { FAQ } from './app/components/faq'
 import { FinalCTA } from './app/components/final-cta'
@@ -29,6 +31,8 @@ function App() {
           <Projects />
           <Ponto />
           <Sistema2D />
+          <DocFlow />
+          <CobraFlow />
           <HowItWorks />
           <FAQ />
           <FinalCTA />

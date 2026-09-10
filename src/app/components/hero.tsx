@@ -1,5 +1,20 @@
-import { ArrowRightIcon, ClockIcon, ShoeIcon } from './icons'
+import { products } from '../../data/products'
+import { ArrowRightIcon, BellIcon, ClockIcon, ShoeIcon, SignatureIcon } from './icons'
 import { Badge, Button, Container } from './ui'
+
+const icons = {
+  ponto: ClockIcon,
+  'sistema-2d': ShoeIcon,
+  docflow: SignatureIcon,
+  cobraflow: BellIcon,
+}
+
+const tones = {
+  brand: { label: 'text-brand', border: 'hover:border-brand/25' },
+  warm: { label: 'text-warm', border: 'hover:border-warm/30' },
+  doc: { label: 'text-doc', border: 'hover:border-doc/30' },
+  success: { label: 'text-success', border: 'hover:border-success/30' },
+}
 
 export const Hero = () => {
   return (
@@ -11,8 +26,8 @@ export const Hero = () => {
             Software para a operação que não cabe em planilha
           </h1>
           <p className="mx-auto mt-6 max-w-2xl text-base leading-7 text-mute sm:text-lg sm:leading-8">
-            A VK Labs desenvolve sistemas para jornada de equipe e varejo de calçados. Dois produtos prontos
-            para implantar: Ponto do Colaborador e Sistema 2D.
+            A VK Labs desenvolve SaaS para jornada, contratos, cobrança e varejo de calçados. Produtos
+            prontos para implantar — e o CobraFlow em construção.
           </p>
 
           <div className="mt-8 flex flex-col items-stretch justify-center gap-3 sm:flex-row sm:items-center">
@@ -27,39 +42,43 @@ export const Hero = () => {
         </div>
 
         <div className="mx-auto mt-14 grid max-w-4xl gap-4 sm:grid-cols-2">
-          <a
-            href="#ponto"
-            className="group rounded-2xl border border-white/8 bg-surface-soft p-6 no-underline transition duration-200 hover:border-brand/25"
-          >
-            <span className="inline-flex items-center gap-2 text-xs font-semibold tracking-[0.08em] text-brand uppercase">
-              <ClockIcon className="h-3.5 w-3.5" />
-              RH e jornada
-            </span>
-            <h2 className="mt-3 mb-0 text-xl font-semibold text-white">Ponto do Colaborador</h2>
-            <p className="mt-2 mb-0 text-sm leading-6 text-mute">
-              Marcações, jornada e relatórios para colaborador e gestão — com base para o espelho ponto.
-            </p>
-            <span className="mt-4 inline-flex text-sm font-semibold text-brand transition group-hover:gap-2">
-              Ver produto →
-            </span>
-          </a>
+          {products.map((item) => {
+            const Icon = icons[item.id]
+            const tone = tones[item.tone]
+            const developing = item.status === 'development'
 
-          <a
-            href="#sistema-2d"
-            className="group rounded-2xl border border-white/8 bg-surface-soft p-6 no-underline transition duration-200 hover:border-warm/30"
-          >
-            <span className="inline-flex items-center gap-2 text-xs font-semibold tracking-[0.08em] text-warm uppercase">
-              <ShoeIcon className="h-3.5 w-3.5" />
-              Varejo de calçados
-            </span>
-            <h2 className="mt-3 mb-0 text-xl font-semibold text-white">Sistema 2D</h2>
-            <p className="mt-2 mb-0 text-sm leading-6 text-mute">
-              Estoque por numeração, vendas, condicional e dashboard — ERP pensado para o balcão da loja.
-            </p>
-            <span className="mt-4 inline-flex text-sm font-semibold text-warm transition group-hover:gap-2">
-              Ver produto →
-            </span>
-          </a>
+            return (
+              <a
+                key={item.id}
+                href={item.url ?? item.href}
+                target={item.url ? '_blank' : undefined}
+                rel={item.url ? 'noopener noreferrer' : undefined}
+                className={`group rounded-2xl border border-white/8 bg-surface-soft p-6 no-underline transition duration-200 ${tone.border}`}
+              >
+                <div className="flex items-center justify-between gap-3">
+                  <span className={`inline-flex items-center gap-2 text-xs font-semibold tracking-[0.08em] uppercase ${tone.label}`}>
+                    <Icon className="h-3.5 w-3.5" />
+                    {item.category}
+                  </span>
+                  {developing && (
+                    <span className="rounded-full border border-success/25 bg-success/[0.08] px-2 py-0.5 text-[0.62rem] font-semibold tracking-[0.06em] text-success uppercase">
+                      Em desenvolvimento
+                    </span>
+                  )}
+                </div>
+                <h2 className="mt-3 mb-0 text-xl font-semibold text-white">{item.name}</h2>
+                {item.url && (
+                  <span className="mt-1 block text-xs font-medium text-mute-dark">
+                    {item.url.replace('https://', '')}
+                  </span>
+                )}
+                <p className="mt-2 mb-0 text-sm leading-6 text-mute">{item.pitch}</p>
+                <span className={`mt-4 inline-flex text-sm font-semibold transition group-hover:gap-2 ${tone.label}`}>
+                  {developing ? 'Ver prévia →' : item.url ? 'Acessar produto →' : 'Ver produto →'}
+                </span>
+              </a>
+            )
+          })}
         </div>
       </Container>
     </section>

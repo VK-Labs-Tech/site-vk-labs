@@ -7,13 +7,13 @@ export const HowItWorks = () => {
       icon: SearchIcon,
       title: 'Diagnóstico',
       description:
-        'Mapeamos a jornada da equipe ou o fluxo da loja — ponto, grade, vendas e condicional — para priorizar o que entra primeiro.',
+        'Mapeamos jornada, contratos, cobrança ou o fluxo da loja — para priorizar o que entra primeiro.',
     },
     {
       icon: RocketIcon,
       title: 'Implantação',
       description:
-        'Configuramos Ponto do Colaborador ou Sistema 2D em ciclos curtos, com validação no uso real do RH ou do balcão.',
+        'Configuramos o produto escolhido em ciclos curtos, com validação no uso real — RH, jurídico, financeiro ou balcão.',
     },
     {
       icon: TrendIcon,

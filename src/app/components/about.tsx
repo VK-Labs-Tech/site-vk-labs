@@ -10,12 +10,12 @@ const principles = [
   {
     icon: CheckIcon,
     title: 'Produto no problema certo',
-    text: 'Ponto para jornada de equipe. Sistema 2D para loja de calçados. Sem misturar o que pede fluxo diferente.',
+    text: 'Ponto para jornada. DocFlow para contratos. CobraFlow para cobrança. Sistema 2D para loja de calçados.',
   },
   {
     icon: PinIcon,
     title: 'Perto da operação',
-    text: 'Diagnóstico, go-live e evolução com quem está no balcão ou no RH — de Cuiabá para o restante do Brasil.',
+    text: 'Diagnóstico, go-live e evolução com quem usa o sistema no dia a dia — de Cuiabá para o restante do Brasil.',
   },
 ]
 
@@ -29,11 +29,11 @@ export const About = () => {
             <GradientHeading>Sistemas feitos para o dia a dia, não para a apresentação</GradientHeading>
             <p className="mt-5 max-w-xl text-base leading-7 text-mute">
               A VK Labs Tech constrói software operacional. O objetivo é simples: registrar o que acontece,
-              organizar a equipe ou o estoque, e entregar relatório sem retrabalho em planilha.
+              organizar equipe, contrato, cobrança ou estoque, e entregar relatório sem retrabalho em planilha.
             </p>
             <p className="mt-4 max-w-xl text-base leading-7 text-mute">
               Trabalhamos com ciclo curto: diagnóstico da operação, implantação do produto e evolução com
-              base no uso. Ponto do Colaborador e Sistema 2D nascem desse jeito de trabalhar.
+              base no uso. Ponto, Sistema 2D, DocFlow e CobraFlow nascem desse jeito de trabalhar.
             </p>
           </div>
 

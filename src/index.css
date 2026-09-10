@@ -15,6 +15,7 @@
   --color-accent: #3a8fd4;
   --color-warm: #e8b86a;
   --color-success: #5cbf9a;
+  --color-doc: #8aa4ff;
   --color-line: rgb(255 255 255 / 0.08);
 
   --shadow-panel: 0 20px 50px rgb(0 0 0 / 0.28);
@@ -59,6 +60,8 @@
   #projects,
   #ponto,
   #sistema-2d,
+  #docflow,
+  #cobraflow,
   #process,
   #faq,
   #contact {

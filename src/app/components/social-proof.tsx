@@ -1,8 +1,8 @@
 import { Container } from './ui'
 
 const items = [
-  { value: 'Software house', text: 'Sistemas pensados para a rotina da empresa, não para o catálogo genérico.' },
-  { value: 'Dois produtos', text: 'Ponto do Colaborador e Sistema 2D — cada um no problema certo.' },
+  { value: 'Software house', text: 'SaaS pensado para a rotina da empresa, não para o catálogo genérico.' },
+  { value: 'Quatro produtos', text: 'Ponto, Sistema 2D, DocFlow e CobraFlow — cada um no problema certo.' },
   { value: 'Cuiabá, MT', text: 'Atendimento próximo, implantação acompanhada e suporte contínuo.' },
 ]
 

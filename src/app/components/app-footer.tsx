@@ -13,18 +13,34 @@ export const AppFooter = () => {
               <img src={logo} alt="VK Labs Tech" className="h-8 w-auto" />
             </a>
             <p className="mt-4 mb-0 max-w-xs text-sm leading-6 text-mute">
-              Software house em Cuiabá. Sistemas para jornada de equipe e varejo de calçados.
+              Software house em Cuiabá. SaaS para jornada, contratos, cobrança e varejo de calçados.
             </p>
           </div>
 
           <div>
             <p className="m-0 text-xs font-semibold tracking-[0.1em] text-mute-dark uppercase">Produtos</p>
             <nav className="mt-4 flex flex-col gap-2" aria-label="Produtos">
-              <a className="text-sm text-mute no-underline transition hover:text-white" href="#ponto">
+              <a
+                className="text-sm text-mute no-underline transition hover:text-white"
+                href="https://ponto.vklabs.online"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 Ponto do Colaborador
               </a>
               <a className="text-sm text-mute no-underline transition hover:text-white" href="#sistema-2d">
                 Sistema 2D
+              </a>
+              <a
+                className="text-sm text-mute no-underline transition hover:text-white"
+                href="https://docflow.vklabs.online"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                DocFlow
+              </a>
+              <a className="text-sm text-mute no-underline transition hover:text-white" href="#cobraflow">
+                CobraFlow
               </a>
             </nav>
           </div>

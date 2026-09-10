@@ -1,14 +1,13 @@
 <svg width="240" height="80" viewBox="0 0 240 80" fill="none" xmlns="http://www.w3.org/2000/svg">
   <defs>
     <linearGradient id="g" x1="0" x2="1">
-      <stop offset="0" stop-color="#00c0ff"/>
-      <stop offset="1" stop-color="#6be0ff"/>
+      <stop offset="0" stop-color="#4ec4e8"/>
+      <stop offset="1" stop-color="#8ad8f0"/>
     </linearGradient>
   </defs>
-  <rect width="240" height="80" rx="14" fill="transparent"/>
-  <g transform="translate(12,8)">
-    <path d="M0 64 L16 0 L32 64 Z" fill="url(#g)"/>
-    <text x="52" y="46" font-family="Inter, Arial, sans-serif" font-size="28" font-weight="700" fill="#e9fbff">VKLabs</text>
-    <text x="52" y="64" font-family="Inter, Arial, sans-serif" font-size="12" fill="#9fb0c8">TECH</text>
+  <g transform="translate(8,10)">
+    <path d="M4 54 L18 6 L32 54 Z" fill="url(#g)"/>
+    <text x="46" y="38" font-family="Plus Jakarta Sans, Inter, Arial, sans-serif" font-size="26" font-weight="600" fill="#f3f6fa">VK Labs</text>
+    <text x="46" y="56" font-family="Plus Jakarta Sans, Inter, Arial, sans-serif" font-size="11" font-weight="600" letter-spacing="0.22em" fill="#8b9cb0">TECH</text>
   </g>
 </svg>

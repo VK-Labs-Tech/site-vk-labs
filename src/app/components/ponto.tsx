@@ -32,27 +32,25 @@ const punches = [
 
 export const Ponto = () => {
   return (
-    <section id="ponto" className="py-16 sm:py-24" aria-label="Ponto do Colaborador">
+    <section id="ponto" className="border-t border-white/[0.06] py-20 sm:py-24" aria-label="Ponto do Colaborador">
       <Container>
-        <div className="mb-12 max-w-3xl">
+        <div className="mb-12 max-w-2xl">
           <Badge>Ponto do Colaborador</Badge>
           <GradientHeading>Jornada da equipe, do registro ao relatório</GradientHeading>
-          <p className="mt-4 max-w-2xl text-base leading-7 text-mute">
+          <p className="mt-4 text-base leading-7 text-mute">
             Sistema para marcar ponto e acompanhar a jornada — com visão para o colaborador e para a gestão,
             e base para o espelho ponto.
           </p>
         </div>
 
-        <div className="grid items-start gap-12 lg:grid-cols-2">
-          <div className="reveal rounded-3xl border border-brand/16 bg-gradient-to-br from-brand/[0.09] to-white/[0.025] p-6 shadow-panel">
+        <div className="grid items-start gap-10 lg:grid-cols-2">
+          <div className="reveal rounded-2xl border border-white/8 bg-surface-soft p-6">
             <div className="flex items-start justify-between gap-4">
               <div>
-                <p className="m-0 text-[0.68rem] font-bold tracking-[0.16em] text-mute-dark uppercase">
-                  Jornada de hoje
-                </p>
-                <h3 className="mt-1 mb-0 text-xl font-bold">Ana Souza · Atendimento</h3>
+                <p className="m-0 text-xs font-semibold tracking-[0.1em] text-mute-dark uppercase">Jornada de hoje</p>
+                <h3 className="mt-1 mb-0 text-lg font-semibold">Ana Souza · Atendimento</h3>
               </div>
-              <span className="rounded-full border border-success/30 bg-success/[0.075] px-3 py-1 text-xs font-semibold text-success">
+              <span className="rounded-full border border-success/25 bg-success/[0.08] px-3 py-1 text-xs font-semibold text-success">
                 Em expediente
               </span>
             </div>
@@ -61,14 +59,12 @@ export const Ponto = () => {
               {punches.map((item) => (
                 <div
                   key={item.label}
-                  className={`flex items-center justify-between rounded-xl border p-3 ${
-                    item.done
-                      ? 'border-white/[0.07] bg-black/16'
-                      : 'border-warm/30 bg-warm/[0.075]'
+                  className={`flex items-center justify-between rounded-lg border px-3 py-3 ${
+                    item.done ? 'border-white/8 bg-surface' : 'border-warm/25 bg-warm/[0.06]'
                   }`}
                 >
                   <span className="text-sm text-mute">{item.label}</span>
-                  <strong className="text-sm text-white">{item.value}</strong>
+                  <strong className="text-sm font-semibold text-white">{item.value}</strong>
                 </div>
               ))}
             </div>
@@ -79,9 +75,9 @@ export const Ponto = () => {
                 { label: 'Intervalo', value: '1h 01m' },
                 { label: 'Previsto', value: '08h' },
               ].map((item) => (
-                <article key={item.label} className="rounded-xl border border-white/[0.07] bg-black/16 p-3 text-center">
+                <article key={item.label} className="rounded-lg border border-white/8 bg-surface p-3 text-center">
                   <span className="block text-xs text-mute-dark">{item.label}</span>
-                  <strong className="text-sm text-white">{item.value}</strong>
+                  <strong className="text-sm font-semibold text-white">{item.value}</strong>
                 </article>
               ))}
             </div>
@@ -91,11 +87,11 @@ export const Ponto = () => {
             {features.map((feature, index) => (
               <article
                 key={feature.title}
-                className={`reveal reveal-delay-${(index % 3) + 1} rounded-xl border border-white/[0.07] bg-white/[0.025] p-4 transition duration-200 hover:translate-x-1 hover:border-brand/16`}
+                className={`reveal reveal-delay-${(index % 3) + 1} rounded-xl border border-white/8 bg-surface-soft p-4`}
               >
-                <div className="mb-2 flex items-center gap-2 text-brand">
+                <div className="mb-1.5 flex items-center gap-2 text-brand">
                   <feature.icon className="h-4 w-4" />
-                  <h3 className="m-0 font-bold text-white">{feature.title}</h3>
+                  <h3 className="m-0 text-base font-semibold text-white">{feature.title}</h3>
                 </div>
                 <p className="m-0 text-sm leading-6 text-mute">{feature.text}</p>
               </article>
@@ -103,7 +99,7 @@ export const Ponto = () => {
           </div>
         </div>
 
-        <div className="reveal mt-10 flex flex-col items-start gap-4 rounded-2xl border border-white/[0.07] bg-white/[0.025] p-5 sm:flex-row sm:items-center sm:justify-between">
+        <div className="reveal mt-10 flex flex-col items-start gap-4 rounded-xl border border-white/8 bg-surface-soft p-5 sm:flex-row sm:items-center sm:justify-between">
           <p className="m-0 max-w-xl text-ink-soft">
             Quer organizar o ponto da equipe com jornada e relatórios no mesmo lugar?
           </p>

@@ -29,29 +29,36 @@ export const FAQ = () => {
   ]
 
   return (
-    <section id="faq" className="py-16 sm:py-24" aria-label="Perguntas frequentes">
+    <section id="faq" className="border-t border-white/[0.06] py-20 sm:py-24" aria-label="Perguntas frequentes">
       <Container>
-        <Badge>FAQ</Badge>
-        <GradientHeading>Perguntas frequentes</GradientHeading>
+        <div className="grid gap-10 lg:grid-cols-[minmax(0,0.85fr)_minmax(0,1.15fr)] lg:gap-16">
+          <div>
+            <Badge>FAQ</Badge>
+            <GradientHeading>Perguntas frequentes</GradientHeading>
+            <p className="mt-4 max-w-sm text-base leading-7 text-mute">
+              Se a sua dúvida não estiver aqui, fale com a gente. Respondemos por WhatsApp ou e-mail.
+            </p>
+          </div>
 
-        <div className="mt-12 grid gap-3">
-          {items.map((item, i) => (
-            <details
-              key={item.q}
-              className={`reveal reveal-delay-${Math.min(i + 1, 4)} group rounded-2xl border border-white/[0.07] bg-white/[0.025] p-5 transition duration-200 open:border-brand/16 open:bg-brand/[0.035]`}
-            >
-              <summary className="flex cursor-pointer list-none items-center justify-between gap-5 font-bold text-white [&::-webkit-details-marker]:hidden">
-                {item.q}
-                <span
-                  className="shrink-0 text-brand transition duration-200 group-open:rotate-180"
-                  aria-hidden="true"
-                >
-                  ▾
-                </span>
-              </summary>
-              <p className="mt-4 leading-6 text-mute">{item.a}</p>
-            </details>
-          ))}
+          <div className="grid gap-2">
+            {items.map((item, i) => (
+              <details
+                key={item.q}
+                className={`reveal reveal-delay-${Math.min(i + 1, 4)} group border-b border-white/8 py-4`}
+              >
+                <summary className="flex cursor-pointer list-none items-center justify-between gap-5 text-left font-semibold text-white [&::-webkit-details-marker]:hidden">
+                  {item.q}
+                  <span
+                    className="shrink-0 text-mute-dark transition duration-200 group-open:rotate-45"
+                    aria-hidden="true"
+                  >
+                    +
+                  </span>
+                </summary>
+                <p className="mt-3 max-w-2xl leading-6 text-mute">{item.a}</p>
+              </details>
+            ))}
+          </div>
         </div>
       </Container>
     </section>

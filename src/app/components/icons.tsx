@@ -106,3 +106,24 @@ export const MailIcon = ({ className = 'h-4 w-4' }: IconProps) => (
     <path d="m4.5 7.5 7.5 6 7.5-6" stroke="currentColor" strokeWidth="1.75" strokeLinecap="round" strokeLinejoin="round" />
   </svg>
 )
+
+export const BuildingIcon = ({ className = 'h-5 w-5' }: IconProps) => (
+  <svg className={className} viewBox="0 0 24 24" fill="none" aria-hidden="true">
+    <path d="M5 20V6.5A1.5 1.5 0 0 1 6.5 5h7A1.5 1.5 0 0 1 15 6.5V20M15 10h3.5A1.5 1.5 0 0 1 20 11.5V20" stroke="currentColor" strokeWidth="1.75" strokeLinejoin="round" />
+    <path d="M4 20h16M8 8.5h2M8 12h2M8 15.5h2M12.5 8.5h.5M12.5 12h.5M12.5 15.5h.5" stroke="currentColor" strokeWidth="1.75" strokeLinecap="round" />
+  </svg>
+)
+
+export const PinIcon = ({ className = 'h-5 w-5' }: IconProps) => (
+  <svg className={className} viewBox="0 0 24 24" fill="none" aria-hidden="true">
+    <path d="M12 21s6.5-5.2 6.5-10.2A6.5 6.5 0 0 0 5.5 10.8C5.5 15.8 12 21 12 21Z" stroke="currentColor" strokeWidth="1.75" strokeLinejoin="round" />
+    <circle cx="12" cy="10.8" r="2.2" stroke="currentColor" strokeWidth="1.75" />
+  </svg>
+)
+
+export const CheckIcon = ({ className = 'h-5 w-5' }: IconProps) => (
+  <svg className={className} viewBox="0 0 24 24" fill="none" aria-hidden="true">
+    <circle cx="12" cy="12" r="8.25" stroke="currentColor" strokeWidth="1.75" />
+    <path d="m8.8 12.2 2.2 2.2 4.3-4.6" stroke="currentColor" strokeWidth="1.75" strokeLinecap="round" strokeLinejoin="round" />
+  </svg>
+)

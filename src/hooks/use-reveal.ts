@@ -18,5 +18,5 @@ export function useReveal() {
     elements.forEach((el) => observer.observe(el))
 
     return () => observer.disconnect()
-  })
+  }, [])
 }

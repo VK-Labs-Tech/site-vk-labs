@@ -9,14 +9,13 @@ const icons = {
 
 export const Projects = () => {
   return (
-    <section id="projects" className="py-16 sm:py-24" aria-label="Produtos">
+    <section id="projects" className="border-t border-white/[0.06] py-20 sm:py-24" aria-label="Produtos">
       <Container>
-        <div className="mb-12 max-w-3xl">
+        <div className="mb-12 max-w-2xl">
           <Badge>Produtos</Badge>
           <GradientHeading>Dois sistemas, dois problemas de operação</GradientHeading>
-          <p className="mt-4 max-w-2xl text-base leading-7 text-mute">
-            Ponto do Colaborador para a jornada da equipe. Sistema 2D para a loja de calçados. Cada produto
-            com o fluxo que o dia a dia pede.
+          <p className="mt-4 text-base leading-7 text-mute">
+            Cada produto cobre um fluxo completo. Escolha o que a sua operação precisa agora — ou os dois.
           </p>
         </div>
 
@@ -28,46 +27,38 @@ export const Projects = () => {
             return (
               <article
                 key={item.id}
-                className={`rounded-2xl border bg-gradient-to-br from-[#0d1e32]/72 to-[#07111e]/62 p-6 shadow-[0_16px_50px_rgba(0,0,0,0.16)] transition duration-200 hover:-translate-y-1 hover:shadow-[0_24px_70px_rgba(0,0,0,0.24)] ${
-                  featured
-                    ? 'border-warm/16 hover:border-warm/30'
-                    : 'border-white/[0.07] hover:border-brand/20'
+                className={`rounded-2xl border bg-surface-soft p-6 transition duration-200 hover:border-white/16 ${
+                  featured ? 'border-warm/18' : 'border-white/8'
                 }`}
               >
                 <div
-                  className={`mb-5 flex h-11 w-11 items-center justify-center rounded-xl border ${
-                    featured
-                      ? 'border-warm/20 bg-warm/[0.075] text-warm'
-                      : 'border-brand/20 bg-brand/[0.075] text-brand'
+                  className={`mb-5 flex h-10 w-10 items-center justify-center rounded-lg border ${
+                    featured ? 'border-warm/20 bg-warm/[0.08] text-warm' : 'border-brand/20 bg-brand/[0.08] text-brand'
                   }`}
                 >
                   <Icon />
                 </div>
 
-                <div className="mb-3 flex flex-wrap items-center gap-2">
-                  <span className="inline-flex rounded-full border border-brand/16 bg-brand/[0.045] px-3 py-1 text-[0.65rem] font-bold tracking-[0.1em] text-[#bceeff] uppercase">
-                    {item.category}
-                  </span>
-                  {featured && (
-                    <span className="inline-flex rounded-full border border-warm/18 bg-warm/[0.05] px-3 py-1 text-[0.65rem] font-bold tracking-[0.1em] text-[#ffe0a4] uppercase">
-                      Novo
-                    </span>
-                  )}
-                </div>
+                <span
+                  className={`text-xs font-semibold tracking-[0.08em] uppercase ${
+                    featured ? 'text-warm' : 'text-brand'
+                  }`}
+                >
+                  {item.category}
+                </span>
 
-                <h3 className="mb-2 text-lg font-bold text-white">{item.name}</h3>
+                <h3 className="mt-2 mb-2 text-xl font-semibold text-white">{item.name}</h3>
                 <p className="m-0 leading-6 text-mute">{item.description}</p>
 
-                <div className="my-4 rounded-xl border border-success/15 bg-success/[0.045] p-3">
-                  <span className="text-[0.65rem] tracking-[0.1em] text-[#a4efcc]/70 uppercase">Resultado</span>
-                  <strong className="mt-1 block text-sm font-semibold text-white">{item.result}</strong>
-                </div>
+                <p className="mt-4 mb-0 border-l-2 border-white/12 pl-3 text-sm leading-6 text-ink-soft">
+                  {item.result}
+                </p>
 
-                <ul className="m-0 flex list-none flex-wrap gap-2 p-0">
+                <ul className="mt-4 mb-0 flex list-none flex-wrap gap-2 p-0">
                   {item.tags.map((tag) => (
                     <li
                       key={tag}
-                      className="rounded-full border border-white/8 bg-white/[0.025] px-3 py-1.5 text-xs font-semibold text-[#b9cde0]"
+                      className="rounded-full border border-white/8 px-3 py-1 text-xs font-medium text-mute"
                     >
                       {tag}
                     </li>
@@ -75,8 +66,8 @@ export const Projects = () => {
                 </ul>
 
                 <a
-                  className={`mt-5 inline-flex items-center gap-2 text-sm font-bold no-underline transition duration-200 hover:gap-2.5 ${
-                    featured ? 'text-warm hover:text-[#ffe4b0]' : 'text-brand hover:text-brand-soft'
+                  className={`mt-5 inline-flex items-center gap-2 text-sm font-semibold no-underline transition duration-200 hover:gap-2.5 ${
+                    featured ? 'text-warm hover:text-[#f0d09a]' : 'text-brand hover:text-brand-soft'
                   }`}
                   href={item.href}
                 >
